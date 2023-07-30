@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-color: #e6f2ff;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo-image {
+    width: 45px;
+    height: 90px;
+}
+
+nav .logo-image img {
+    width: auto;
+    height: 60px;
+    object-fit: cover;
+    padding-left: 18px;
+    margin-top: 10px;
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #1891d1;
+    padding: 10px 0 10px 10px;
+}
+
+nav .menu-items {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 150px);
+    justify-content: space-between;
+}
+
+nav .menu-items li {
+    list-style: none;
+}
+
+nav .menu-items li a {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    text-decoration: none;
+}
+
+
+
+nav .menu-items li.active a {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    position: relative;
+}
+
+nav .menu-items li a ion-icon {
+    color: white;
+    font-size: 24px;
+    min-width: 45px;
+}
+
+nav .menu-items li a .links {
+    font-size: 18px;
+    color: white;
+}
+
+nav .menu-items li.active a {
+    background-color: #e6f2ff;
+}
+
+nav .menu-items li.active a:before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    top: -40px;
+    border-radius: 50%;
+    box-shadow: 20px 20px #e6f2ff;
+    pointer-events: none;
+}
+
+nav .menu-items li.active a:after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    bottom: -40px;
+    border-radius: 50%;
+    box-shadow: 20px -20px #e6f2ff;
+    pointer-events: none;
+}
+
+
+nav .menu-items li.active a .links {
+    color: #1891d1;
+}
+
+nav .menu-items li.active a ion-icon {
+    color: #1891d1;
+}
+
+.dashboard {
+    position: relative;
+    left: 250px;
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    background-color: #e6f2ff;
+    padding: 0px 15px;
+}
+
+
+.container {
+    padding-left: 10px;
+}
+
+.container .title {
+    display: flex;
+    align-items: center;
+    margin: 60px 0 30px;
+}
+
+.container .title ion-icon {
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    background-color: #1d64c2;
+    color: White;
+    border-radius: 6px;
+}
+
+.container .title .text {
+    font-size: 24px;
+    font-weight: 500;
+    color: #002960;
+    margin-left: 10px;
+}
+
+.container .boxes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: none;
+}
+
+.container .boxes .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100%/4 - 15px);
+    padding: 15px 20px;
+    border-radius: 10px;
+    background-color: #9cdef5;
+}
+
+.boxes .box ion-icon {
+    font-size: 35px;
+    color: black;
+    margin: 5px;
+}
+
+.boxes .box .text {
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+}
+
+.boxes .box .number {
+    font-size: 40px;
+    font-weight: 500;
+    color: black;
+}
+
+.boxes .box.box1 {
+    background-color: #ffd39a;
+}
+
+.boxes .box.box2 {
+    background-color: #c1d5a4;
+}
+
+.boxes .box.box3 {
+    background-color: #E2D9FF;
+}
+
+.boxes .box.box4 {
+    background-color: #99BEBC;
+}
+
+.container .table-design{
+padding: 0px 20px 40px 70px;
+}
+
+.container .activity {
+    width: 90%;
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+}
+
+.container .activity thead tr th{
+    text-align: left;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+.container .activity tbody tr td{
+    color: #333;
+    white-space: nowrap;
+    padding: 4px;
+}
+
+.container .activity tbody tr td a.delete-btn{
+    color: #000;
+    text-decoration: none;
+}
+
+.container .activity tbody tr.odd{
+    background-color: #ceecf6;
+
+}
+
+
+/* Add user */
+.addUser {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 10px 0% 50px;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addUser-field input[type="text"],
+.addUser-field input[type="email"],
+.addUser-field input[type="date"],
+.addUser-field input[type="tel"],
+.addUser-field textarea,
+.addUser-field input[type="password"],
+.editForm input[type="text"],
+.editForm select{
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 80%;
+    font-size: 16px;
+}
+.addUser-field input[type="radio"]{
+    margin-top: 11px;
+    margin-left: 10px;
+}
+
+.addUser-field label {
+    display: inline-block;
+    margin-left: 5px;
+    color: rgb(79, 79, 79);
+    font-size: 16px;
+}
+
+.addUser fieldset {
+    border-radius: 10px;
+    padding: 20px 40px 20px 40px;
+}
+
+.addUser-field input[type="submit"]{
+    width: 300px;
+    padding: 10px;
+    background-color: #1d64c2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.editForm input[type="submit"]{
+    width: 300px;
+    padding: 10px;
+    background-color: #1d64c2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.addUser .inline-input{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.addUser .inline-input .inputs{
+    margin-left: 5%;
+    width: 50%;
+}
+
+.addUser-field input[type="checkbox"]{
+    margin: 12px 0px 12px 10%;
+}
+
+.addUser .Address{
+    width: 107.5%;
+    margin: 0px 5% 10px;
+}
+
+.addUser span{
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 20px 0px 30px;
+
+}
+
